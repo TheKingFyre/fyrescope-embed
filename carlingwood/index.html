@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Santa line wait time · Carlingwood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500&display=swap">
+<style>html,body{margin:0;padding:0;height:100%;background:transparent}</style>
+</head>
+<body>
+<div id="card" data-fyl-card data-fill data-location="carlingwood"></div>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), c = document.getElementById('card');
+  var lang = q.get('lang') === 'fr' ? 'fr' : 'en';
+  c.setAttribute('data-lang', lang); document.documentElement.lang = lang;
+  if (q.get('theme') === 'light') c.setAttribute('data-theme', 'light');
+})();
+</script>
+<script src="../line-card.js"></script>
+</body>
+</html>
