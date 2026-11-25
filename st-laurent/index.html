@@ -10,13 +10,14 @@
 <style>html,body{margin:0;padding:0;height:100%;background:transparent}</style>
 </head>
 <body>
-<div id="card" data-fyl-card data-fill data-location="st-laurent"></div>
+<div id="card" data-fyl-card data-fill data-location="st-laurent" data-theme="dark"></div>
 <script>
 (function () {
   var q = new URLSearchParams(location.search), c = document.getElementById('card');
   var lang = q.get('lang') === 'fr' ? 'fr' : 'en';
   c.setAttribute('data-lang', lang); document.documentElement.lang = lang;
-  if (q.get('theme') === 'light') c.setAttribute('data-theme', 'light');
+  var theme = q.get('theme');
+  if (theme === 'light' || theme === 'red' || theme === 'dark') c.setAttribute('data-theme', theme);
 })();
 </script>
 <script src="../line-card.js"></script>
